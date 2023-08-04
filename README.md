@@ -14,8 +14,7 @@ This work explains the effects of system parameters on the MO optimization in PI
 
 ## Requirements
 - tensorflow>2.2
+- numpy
 - scipy
 - pyDOE
 - pyyaml
-- pandas
-- scikit-learn
