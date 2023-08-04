@@ -1,0 +1,61 @@
+#################################
+# Version & seed settings
+#################################
+
+version: "default"
+seed: 0
+
+#################################
+# System settings
+#################################
+
+# grid spacing
+L: 1
+# Reynolds Number
+Re: 40
+
+#################################
+# Data settings
+#################################
+
+# Boundary Condition
+N_BC: 128
+# Collocation Points
+N_col: 1024
+# Test Set points
+N_test: 128
+
+#################################
+# PhysicsInformedNN settings
+#################################
+
+# number of hidden layers
+n_hidden: 4
+# number of neurons per layer
+n_neurons: 50
+# activation function hidden layers
+activation: 'tanh'
+feature_scaling: True
+
+#################################
+# Training settings
+#################################
+
+n_epochs: 100000
+learning_rate: 0.001
+decay_rate: 0.9
+
+#################################
+# Loss weighting
+#################################
+
+# Data -> 1; Physics -> 0
+alpha: 0.5
+
+#################################
+# Callback and Log settings
+#################################
+
+freq_log: 100
+freq_print: 10000
+keys_print: ['loss_train', 'loss_U', 'loss_F', 'loss_test']

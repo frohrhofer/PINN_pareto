@@ -1,0 +1,65 @@
+#################################
+# Version & seed settings
+#################################
+
+version: "default"
+seed: 0
+
+#################################
+# System settings
+#################################
+
+# rod lenght
+L: 1
+# simulation time (multiples of diffusive time scale)
+lambda_tau: 1
+# diffusion coefficient
+kappa: 1
+
+#################################
+# Data settings
+#################################
+
+# Initial Conditions
+N_IC: 128
+# Boundary Conditions
+N_BC: 128
+# Collocation Points
+N_col: 1024
+# Test Set Points
+N_test: 1024
+
+#################################
+# PhysicsInformedNN settings
+#################################
+
+# Number of hidden layers 
+n_hidden: 4
+# Number of neurons per layer
+n_neurons: 50
+# activation function hidden layers
+activation: 'tanh'
+feature_scaling: True
+
+#################################
+# Training settings
+#################################
+
+n_epochs: 100000
+learning_rate: 0.001
+decay_rate: 0.9
+
+#################################
+# Loss weighting
+#################################
+
+# Data -> 1; Physics -> 0
+alpha: 0.5
+
+#################################
+# Callback and Log settings
+#################################
+
+freq_log: 100
+freq_print: 10000
+keys_print: ['loss_train', 'loss_u', 'loss_F', 'loss_test']
