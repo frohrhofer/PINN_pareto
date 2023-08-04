@@ -11,6 +11,13 @@ We empirically verify that loss weights can be used successfully to compensate f
 We further demonstrate that by altering the system parameterization, the apparent Pareto front can shift and exhibit locally convex parts, resulting in a wider range of loss weights for which gradient-based training becomes successful. 
 This work explains the effects of system parameters on the MO optimization in PINNs, and highlights the utility of proposed loss weighting schemes.
 
+## Usage
+'main.ipynb' provides the main Jupyter Notebook that trains a single PINN instance* and creates basic plots.
+After successful training, log files and plots are created and saved to the 'logs' folder under the specified 'version'.
+
+*Configuration Files(s) can be modified and added in the 'configs' folder. These are loaded to initialize PINN instances.
+Note: the 'alpha' parameter adjusts the loss weighting, according to the description found in the manuscript.
+
 
 ## Requirements
 - tensorflow>2.2
