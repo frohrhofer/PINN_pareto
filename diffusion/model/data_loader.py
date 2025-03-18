@@ -102,7 +102,7 @@ class DataLoader():
         X_bottom = [[self.x_min, t] for t in t_ticks]
         # add both boundaries and prodive BC temperature
         X_BC = self.array2tensor(X_top + X_bottom, exp_dim=False)   
-        u_BC = self.array2tensor([[0] * X_BC.shape[0]], exp_dim=False)           
+        u_BC = self.array2tensor([[0]] * X_BC.shape[0], exp_dim=False)           
                
         return X_BC, u_BC
     
